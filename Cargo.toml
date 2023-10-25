@@ -10,17 +10,10 @@ edition = "2021"
 cortex-m = "0.7.4"
 cortex-m-rt = "0.7.1"
 embedded-hal = "0.2.4"
-nb = "1.0.0"
-stm32f1xx-hal = { version = "0.9.0", features = ["rt", "stm32f103", "medium"] }
-rtt-target = { version = "0.3.1", features = ["cortex-m"] }
-panic-rtt-target = { version = "0.1.0", features = ["cortex-m"] }
-# alternate panic impls, choose only one!
-#   panic-halt
-#   panic-semihosting # requires cortex-m-semihosting
-#   panic-itm
-#   panic-abort
-#   panic-ramdump
-#   panic-persist
+stm32f1xx-hal = { version = "0.10.0", features = ["rt", "stm32f103", "medium"] }
+cortex-m-semihosting = "0.5.0"
+panic-halt = "0.2.0"
+
 
 [[bin]]
 name = "blue_pill_base"
@@ -28,6 +21,6 @@ test = false
 bench = false
 
 [profile.release]
-lto = true
-codegen-units = 1
-debug = true
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations

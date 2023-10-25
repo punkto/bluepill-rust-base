@@ -63,3 +63,8 @@ References:
 ## References
 Forked from https://cgit.pinealservo.com/BluePill_Rust/blue_pill_base
 
+Other references:
+ - https://github.com/punkto/rust_stm32f4_discovery_example/tree/main
+
+## Todo
+ - Add some examples from https://github.com/stm32-rs/stm32f1xx-hal/tree/master/examples
