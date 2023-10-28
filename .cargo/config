@@ -3,8 +3,8 @@
 # which option to pick depends on your system
 # runner = "arm-none-eabi-gdb -q -x openocd.gdb"
 #runner = "gdb-multiarch -q -x openocd.gdb"
-runner = "gdb-multiarch -q -x openocd_just_flash_and_run.gdb"
-#runner = "./flash.sh"
+#runner = "gdb-multiarch -q -x openocd_just_flash_and_run.gdb"
+runner = "./flash.sh"
 
 rustflags = [
   # LLD (shipped with the Rust toolchain) is used as the default linker
